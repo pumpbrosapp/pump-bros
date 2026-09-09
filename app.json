@@ -1,0 +1,52 @@
+{
+  "expo": {
+    "name": "Pump Bros",
+    "slug": "pump-bros",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "icon": "./assets/icon.png",
+    "assetBundlePatterns": ["**/*"],
+    "scheme": "pumpbros",
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Pump Bros uses your photos to set your profile picture."
+        }
+      ],
+      "expo-apple-authentication",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 200,
+          "backgroundColor": "#F4F4F2"
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "color": "#4C8BF5"
+        }
+      ]
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.pumpbros.app",
+      "appleTeamId": "8AB5NJA6YN",
+      "usesAppleSignIn": true
+    },
+    "android": {
+      "package": "com.example.pumpbros",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#F4F4F2"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
