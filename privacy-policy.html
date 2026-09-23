@@ -177,9 +177,10 @@
 <strong>iOS bundle identifier:</strong>
 <code>com.pumpbros.app</code><br />
 <strong>Contact:</strong> pumpbrossupport@gmail.com<br />
-<strong>Effective date:</strong> September 15, 2026</p>
+<strong>Effective date:</strong> September 23, 2026</p>
 <p>This Privacy Policy explains how Pump Bros processes information when
 you use the Pump Bros mobile application.</p>
+
 <h2 id="who-is-responsible-for-your-information">1. Who is responsible
 for your information</h2>
 <p>Pump Bros is currently developed and operated by <strong>David Oliver
@@ -190,16 +191,16 @@ entity, so this Policy does not list a company name, business
 registration number, VAT number, or business/residential address. You
 can contact us at <strong>pumpbrossupport@gmail.com</strong> about
 privacy, account, or data requests.</p>
+
 <h2 id="information-we-collect">2. Information we collect</h2>
 <p>We collect and process information that the app actually uses to
 provide its current features.</p>
+
 <h3 id="account-and-authentication-information">Account and
 authentication information</h3>
 <p>Depending on how you sign in, the app uses:</p>
 <ul>
-<li>your email address for email/password authentication;</li>
-<li>information returned through Google Sign-In, including the name and
-email made available by Google; and</li>
+<li>your email address for email/password authentication; and</li>
 <li>information returned through Sign in with Apple, including the name
 and email made available by Apple. Apple may allow you to use a private
 relay email address.</li>
@@ -209,6 +210,7 @@ production code. The app also stores a local authentication/session
 fallback when Supabase is not configured; that fallback is intended for
 an unconfigured/local environment and should not be relied on as the
 production account system.</p>
+
 <h3 id="profile-information">Profile information</h3>
 <p>Your Pump Bros profile can contain:</p>
 <ul>
@@ -226,6 +228,7 @@ required by the app’s social features. In particular, the current
 database permits any authenticated user to read profile rows, while the
 app uses profiles for friend discovery, leaderboards, groups, and
 chats.</p>
+
 <h3 id="workout-and-fitness-activity">Workout and fitness activity</h3>
 <p>The app stores:</p>
 <ul>
@@ -240,6 +243,7 @@ chats.</p>
 <p>Pump Bros does <strong>not</strong>, in the supplied schema, store
 individual sets, repetitions, weights, heart-rate data, GPS/location
 data, or a detailed workout duration.</p>
+
 <h3 id="friends-and-social-activity">Friends and social activity</h3>
 <p>The app stores friend requests and friendships, including the users
 involved, request status, and timestamps.</p>
@@ -251,6 +255,7 @@ can see the group’s roster and group activity as implemented by the
 app.</p>
 <p>If a group’s leader sets a group photo, it is stored in Supabase
 Storage the same way profile pictures are (see below).</p>
+
 <h3 id="messages-and-images">Messages and images</h3>
 <p>Pump Bros currently supports direct messages and group messages.
 Depending on the message, the service stores:</p>
@@ -271,6 +276,7 @@ Supabase Storage. The supplied schema makes the avatar, group-avatars,
 and chat-image buckets publicly readable by URL. Do not treat a profile
 picture, group photo, or chat-image URL as a private or
 access-controlled link.</p>
+
 <h3 id="blocking-reporting-and-content-filtering">Blocking, reporting,
 and content filtering</h3>
 <p>Pump Bros lets you block another user. Blocking is stored as a
@@ -291,6 +297,7 @@ you submit; other users cannot.</p>
 text (and profile names) against a basic, fixed word list and blocks the
 send if it matches. This is a first-pass automated filter, not a
 complete moderation system, and does not review images.</p>
+
 <h3 id="push-notifications">Push notifications</h3>
 <p>If you grant notification permission, Pump Bros can obtain and store
 an Expo push token for the device, together with its platform and update
@@ -310,6 +317,7 @@ sent. Group notifications can include the group name and sender/message
 preview.</p>
 <p>You can turn push notifications off in Pump Bros’ notification
 settings and/or through your device settings.</p>
+
 <h3 id="error-crash-and-performance-reporting">Error, crash, and
 performance reporting</h3>
 <p>The supplied production environment contains a Sentry DSN, and the
@@ -334,6 +342,7 @@ ingest domain in the configured DSN. The exact retention period and any
 further organization-level processing settings cannot be verified from
 this codebase and must be confirmed in the Sentry project before
 publication.</p>
+
 <h3 id="simulated-trainer-profiles">Simulated trainer profiles</h3>
 <p>Pump Bros includes three locally simulated trainer competitors
 (Trainer Joe, Trainer Max, and Trainer Leo). Their displayed XP and
@@ -343,6 +352,7 @@ configuration and the user’s account start date.</p>
 supplied codebase. Despite the in-app “AI trainer” terminology, these
 trainer profiles are currently simulated local data rather than a remote
 generative-AI service.</p>
+
 <h2
 id="information-we-do-not-currently-collect-through-the-implemented-app">3.
 Information we do not currently collect through the implemented app</h2>
@@ -366,6 +376,7 @@ Supabase Storage.</p>
 you meet the 16-and-older age requirement (see Section 12). That date of
 birth is used only for that on-device calculation and is not transmitted
 to or stored by Pump Bros’ servers.</p>
+
 <h2 id="why-we-use-information">4. Why we use information</h2>
 <p>We use information to:</p>
 <ul>
@@ -389,33 +400,36 @@ names before they’re sent or saved;</li>
 </ul>
 <p>We do not use the implemented data flows for advertising or sale of
 personal information.</p>
+
 <h2 id="third-party-services">5. Third-party services</h2>
 <p>The current codebase integrates with the following external
 services:</p>
+
 <h3 id="supabase">Supabase</h3>
 <p>Supabase provides the configured authentication, PostgreSQL database,
 realtime functionality, database functions, and object storage used by
 Pump Bros.</p>
-<h3 id="google">Google</h3>
-<p>Google Sign-In can be used to authenticate an account. Google
-controls its own processing of information under its own terms and
-privacy practices.</p>
+
 <h3 id="apple">Apple</h3>
 <p>Sign in with Apple can be used to authenticate an account. Apple
 controls its own processing of information under its own terms and
 privacy practices.</p>
+
 <h3 id="sentry">Sentry</h3>
 <p>Sentry receives error, crash, and performance/session telemetry when
 Sentry is enabled. The supplied code explicitly sends user context such
 as ID, email, and display name.</p>
+
 <h3 id="expo-push-service">Expo push service</h3>
 <p>Pump Bros sends push notification requests through Expo’s push
 service. The payload can contain notification titles, sender/group
 names, message previews, and routing data needed to open the relevant
 Pump Bros feature.</p>
+
 <p>No Stripe, RevenueCat, Apple In-App Purchase, Google Play Billing,
 OpenAI, Anthropic, Gemini, or other generative-AI/payment SDK was found
 in the supplied codebase.</p>
+
 <h2 id="sharing">6. Sharing</h2>
 <p>Pump Bros shares information with service providers only as needed to
 operate the implemented features, including the providers described
@@ -434,6 +448,7 @@ to protect the rights, safety, security, and integrity of Pump Bros, our
 users, or others.</p>
 <p>We do not sell personal information and do not use personal
 information for targeted advertising in the supplied implementation.</p>
+
 <h2 id="international-processing">7. International processing</h2>
 <p>Pump Bros is operated from Luxembourg. Third-party providers may
 process information in countries other than the country where you live.
@@ -445,6 +460,7 @@ provider.</p>
 <p>Those provider-region and transfer settings must be verified before
 publication if you offer Pump Bros in jurisdictions with cross-border
 transfer requirements.</p>
+
 <h2 id="security">8. Security</h2>
 <p>The supplied Supabase schema uses authentication and Row Level
 Security policies for the main application tables. The database also
@@ -455,6 +471,7 @@ and Pump Bros administrators (for reports), can read them.</p>
 <p>No security measure is completely guaranteed. You are responsible for
 keeping your login credentials secure and for notifying Pump Bros if you
 believe your account has been compromised.</p>
+
 <h2 id="retention">9. Retention</h2>
 <p>For account data, Pump Bros is designed to retain information while
 your account is active and to remove account-linked database records
@@ -477,12 +494,12 @@ image.</p>
 <ul>
 <li>Supabase backups or provider-level logs;</li>
 <li>Sentry events and session/performance data;</li>
-<li>provider authentication records maintained by Apple or Google;
-or</li>
+<li>provider authentication records maintained by Apple; or</li>
 <li>copies that may remain temporarily in technical backups.</li>
 </ul>
 <p>Those retention periods must be confirmed in the relevant provider
 consoles and documented before publication.</p>
+
 <h2 id="account-deletion">10. Account deletion</h2>
 <p>You can initiate deletion from <strong>Profile → Privacy &amp; data →
 Delete account</strong>.</p>
@@ -497,6 +514,7 @@ live-database snapshot), and that provider-side backups follow the
 intended deletion lifecycle.</p>
 <p>Deletion may be subject to limited legal retention obligations where
 applicable.</p>
+
 <h2 id="your-privacy-rights">11. Your privacy rights</h2>
 <p>Depending on where you live and the law that applies, you may have
 rights including:</p>
@@ -525,28 +543,25 @@ applies to you where you live. The legal basis for each processing
 activity depends on the circumstances and may include performance of the
 account/service contract, legitimate interests, compliance with legal
 obligations, or consent where consent is required.</p>
+
 <h2 id="children-and-age-requirements">12. Children and age
 requirements</h2>
 <p><strong>Pump Bros requires everyone to be at least 16 years
 old.</strong> It is not designed for, and does not knowingly allow use
 by, anyone under 16.</p>
 <p>At sign-up, the app asks for your date of birth and calculates your
-age from it before creating an account, for email/password, Google, and
-Apple sign-up alike. Account creation is blocked if the calculated age
-is under 16. The date of birth you enter is used only for that on-device
-calculation — it is not sent to Pump Bros’ servers, stored in the
-database, or retained anywhere by the app once the calculation is
-made.</p>
+age from it before creating an account, for email/password and Apple
+sign-up. Account creation is blocked if the calculated age is under 16.
+The date of birth you enter is used only for that on-device calculation
+— it is not sent to Pump Bros’ servers, stored in the database, or
+retained anywhere by the app once the calculation is made.</p>
 <p>This is a self-reported, calculation-based check, not identity or
 document-based age verification, so it relies on the birth date you
-enter being accurate. Because Pump Bros’ own minimum age (16) is at or
-above the age of consent that GDPR Article 8 sets by default for
-consent-based information-society services (Member States may set their
-own threshold between 13 and 16), Pump Bros does not rely on a younger
-minor’s own consent and does not offer a parental-consent process.</p>
+enter being accurate.</p>
 <p>If you believe an account belonging to someone under 16 exists,
 contact <strong>pumpbrossupport@gmail.com</strong> so it can be reviewed
 and removed.</p>
+
 <h2 id="user-generated-content-blocking-and-reporting">13.
 User-generated content, blocking, and reporting</h2>
 <p>Pump Bros contains user-generated content through direct messages,
@@ -570,16 +585,18 @@ direct or group message for everyone, and any user can hide a message
 from their own view. Users can also remove friends or leave groups.</li>
 </ul>
 <p>These controls are a first-pass, fixed-word-list filter plus a manual
-admin review queue, not a comprehensive automated moderation system, and
-the filter does not review images. Contact
+admin review queue, not a comprehensive automated moderation system,
+and the filter does not review images. Contact
 <strong>pumpbrossupport@gmail.com</strong> for any safety concern that
 these in-app tools do not resolve.</p>
+
 <h2 id="changes-to-this-policy">14. Changes to this Policy</h2>
 <p>We may update this Policy when Pump Bros’ features, processing
 activities, providers, or legal obligations change. The effective date
 at the top of this Policy will be updated when the Policy changes.</p>
 <p>If a change materially affects how we process personal information,
 we will provide additional notice where required by law.</p>
+
 <h2 id="contact">15. Contact</h2>
 <p>For privacy, account, deletion, data-access, or support requests:</p>
 <p><strong>pumpbrossupport@gmail.com</strong></p>
