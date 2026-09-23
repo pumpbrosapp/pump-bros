@@ -1,11 +1,11 @@
 # Terms of Service — Pump Bros
 
-**App:** Pump Bros  
-**Operated by:** David Oliver Fairfax-Jones, an individual (non-trader)  
-**Country:** Luxembourg  
-**iOS bundle identifier:** `com.pumpbros.app`  
-**Contact:** pumpbrossupport@gmail.com  
-**Effective date:** September 15, 2026
+**App:** Pump Bros
+**Operated by:** David Oliver Fairfax-Jones, an individual (non-trader)
+**Country:** Luxembourg
+**iOS bundle identifier:** `com.pumpbros.app`
+**Contact:** [pumpbrossupport@gmail.com](mailto:pumpbrossupport@gmail.com)
+**Effective date:** September 23, 2026
 
 These Terms of Service ("Terms") govern your use of the Pump Bros mobile application and related services.
 
@@ -15,16 +15,16 @@ By creating or using a Pump Bros account, you agree to these Terms to the extent
 
 Pump Bros is a social fitness application that lets users:
 
-- create an account and profile;
-- log workouts and earn XP and streaks;
-- configure a workout split;
-- compare XP with friends and simulated trainer profiles;
-- send and receive friend requests;
-- block accounts they don't want contact from, and report accounts or specific messages to Pump Bros for review;
-- participate in groups, including a group photo that the group's leader can set or change;
-- send direct and group messages, including images;
-- receive optional push notifications; and
-- manage and delete their account.
+* create an account and profile;
+* log workouts and earn XP and streaks;
+* configure a workout split;
+* compare XP with friends and simulated trainer profiles;
+* send and receive friend requests;
+* block accounts they don't want contact from, and report accounts or specific messages to Pump Bros for review;
+* participate in groups, including a group photo that the group's leader can set or change;
+* send direct and group messages, including images;
+* receive optional push notifications; and
+* manage and delete their account.
 
 Features may change over time.
 
@@ -34,7 +34,7 @@ The current implementation does **not** include paid subscriptions, in-app purch
 
 **You must be at least 16 years old to create or use a Pump Bros account.** Pump Bros is not designed for, and does not knowingly permit use by, anyone under 16, and does not offer a parental-consent process for younger users — if you are under 16, do not use Pump Bros.
 
-The sign-up screen asks for your date of birth and calculates your age from it before an account can be created, whether you sign up with email/password, Google, or Apple. An account cannot be created unless that calculated age is 16 or older. This is a self-reported check, not identity or document-based age verification, and applies at sign-up only.
+The sign-up screen asks for your date of birth and calculates your age from it before an account can be created, whether you sign up with email/password or Apple. An account cannot be created unless that calculated age is 16 or older. This is a self-reported check, not identity or document-based age verification, and applies at sign-up only.
 
 You must also be legally capable of entering into these Terms in your jurisdiction. Where the age of contractual capacity in your jurisdiction is above 16, use Pump Bros only with the involvement or authorization required by that jurisdiction's law.
 
@@ -44,7 +44,7 @@ You are responsible for the activity occurring through your account and for main
 
 You agree to provide information that is accurate enough to operate your account and to keep your sign-in information secure.
 
-You may authenticate using email/password, Google, or Apple, subject to the applicable provider's terms.
+You may authenticate using email/password or Apple, subject to the applicable provider's terms.
 
 ## 4. Your content
 
@@ -62,16 +62,16 @@ You should not upload confidential, highly sensitive, or unnecessary personal in
 
 You must not use Pump Bros to:
 
-- break the law or facilitate unlawful activity;
-- threaten, harass, stalk, bully, or intimidate another person;
-- impersonate another person or misrepresent your identity in a deceptive way;
-- publish or transmit content that is unlawful, defamatory, hateful, sexually exploitative, or otherwise prohibited by applicable law;
-- distribute malware, malicious code, spam, or unauthorized advertising;
-- attempt to access another user's account or data without authorization;
-- interfere with or circumvent the security or access controls of Pump Bros or its providers;
-- scrape, copy, reverse engineer, or systematically extract service data except where applicable law permits it;
-- use the service to infringe another person's intellectual-property or privacy rights; or
-- manipulate XP, streaks, leaderboards, or other service functionality through unauthorized technical means.
+* break the law or facilitate unlawful activity;
+* threaten, harass, stalk, bully, or intimidate another person;
+* impersonate another person or misrepresent your identity in a deceptive way;
+* publish or transmit content that is unlawful, defamatory, hateful, sexually exploitative, or otherwise prohibited by applicable law;
+* distribute malware, malicious code, spam, or unauthorized advertising;
+* attempt to access another user's account or data without authorization;
+* interfere with or circumvent the security or access controls of Pump Bros or its providers;
+* scrape, copy, reverse engineer, or systematically extract service data except where applicable law permits it;
+* use the service to infringe another person's intellectual-property or privacy rights; or
+* manipulate XP, streaks, leaderboards, or other service functionality through unauthorized technical means.
 
 You are responsible for the content you submit and for your interactions with other users.
 
@@ -87,11 +87,11 @@ Pump Bros may remove content or restrict accounts where reasonably necessary to 
 
 **Blocking, reporting, and filtering.** Pump Bros provides in-app tools for handling unwanted contact and content:
 
-- You can **block** another account from that person's profile page. Once blocked, that account cannot send you direct messages or friend requests, in either direction.
-- You can **report** a user's profile, or a specific direct or group message, choosing a reason from a fixed list (for example, harassment, spam, a fake profile, or inappropriate content). Reports are reviewed by Pump Bros administrators, who can mark each report as pending, reviewed, or resolved. Submitting a report does not notify the reported user.
-- Direct messages, group messages, and profile/display names are checked against a basic, fixed word list before they are sent or saved, and blocked if they match a clearly prohibited term.
+* You can **block** another account from that person's profile page. Once blocked, that account cannot send you direct messages or friend requests, in either direction.
+* You can **report** a user's profile, or a specific direct or group message, choosing a reason from a fixed list (for example, harassment, spam, a fake profile, or inappropriate content). Reports are reviewed by Pump Bros administrators, who can mark each report as pending, reviewed, or resolved. Submitting a report does not notify the reported user.
+* Direct messages, group messages, and profile/display names are checked against a basic, fixed word list before they are sent or saved, and blocked if they match a clearly prohibited term.
 
-These are first-pass, largely fixed-rule tools, backed by manual admin review of submitted reports — not a fully automated moderation system, and the message filter does not review images. If you encounter content or behavior these tools don't address, contact **pumpbrossupport@gmail.com**.
+These are first-pass, largely fixed-rule tools, backed by manual admin review of submitted reports — not a fully automated moderation system, and the message filter does not review images. If you encounter content or behavior these tools don't address, contact **[pumpbrossupport@gmail.com](mailto:pumpbrossupport@gmail.com)**.
 
 ## 7. Fitness information and no medical advice
 
@@ -115,7 +115,7 @@ Except for rights expressly granted in these Terms or required by law, you may n
 
 ## 10. Third-party services
 
-Pump Bros depends on third-party services including Supabase, Apple, Google, Sentry, and Expo's push-notification infrastructure.
+Pump Bros depends on third-party services including Supabase, Apple, Sentry, and Expo's push-notification infrastructure.
 
 Your use of third-party authentication or platform services may also be subject to those providers' terms and privacy policies.
 
@@ -163,6 +163,6 @@ Nothing in these Terms is intended to deprive consumers of mandatory rights avai
 
 For support, legal, safety, or Terms questions:
 
-**pumpbrossupport@gmail.com**
+**[pumpbrossupport@gmail.com](mailto:pumpbrossupport@gmail.com)**
 
 Pump Bros is operated by David Oliver Fairfax-Jones, an individual in Luxembourg, on a non-trader basis.
