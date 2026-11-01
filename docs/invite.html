@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0D0D0D" />
+<title>Join me on Gym Tonight</title>
+<meta name="description" content="You've been invited to train together on Gym Tonight." />
+<meta property="og:title" content="Join me on Gym Tonight" />
+<meta property="og:description" content="Log workouts, earn XP and climb the leaderboard together." />
+<!--
+  Gym Tonight friend-invite landing page.
+  Host this file next to privacy-policy.html (GitHub Pages:
+  https://pumpbrosapp.github.io/pump-bros/invite.html). Links look like
+  invite.html?c=AB23CD45. Set the two store URLs in the script below once
+  the app is live.
+-->
+<style>
+  :root {
+    --bg: #f6f5f3;
+    --card: #ffffff;
+    --soft: #efedf3;
+    --border: #efeae5;
+    --ink: #0d0d0d;
+    --on-ink: #ffffff;
+    --muted: #8e8d92;
+    --faint: #c4c2c6;
+    --flame: #ff8a3d;
+    --shadow: 0 18px 40px rgba(13, 13, 13, 0.08);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0b0b0d;
+      --card: #151518;
+      --soft: #232328;
+      --border: #26262b;
+      --ink: #f5f5f7;
+      --on-ink: #0d0d0d;
+      --muted: #9b9b9f;
+      --faint: #5a5a60;
+      --shadow: none;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 440px; margin: 0 auto; padding: max(20px, env(safe-area-inset-top)) 16px 36px; }
+
+  /* ---------- hero ---------- */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    border-radius: 32px;
+    padding: 30px 24px 26px;
+    background: #0d0d0d;
+    color: #ffffff;
+  }
+  .hero::before {
+    /* soft light from the top-right + a faint grid, so the black isn't flat */
+    content: "";
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(120% 80% at 100% 0%, rgba(255, 138, 61, 0.28), transparent 55%),
+      linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px) 0 0 / 28px 28px,
+      linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px) 0 0 / 28px 28px;
+    -webkit-mask-image: linear-gradient(180deg, #000 30%, transparent 100%);
+            mask-image: linear-gradient(180deg, #000 30%, transparent 100%);
+  }
+  .hero > * { position: relative; }
+  .brand { display: flex; align-items: center; gap: 10px; }
+  .mark {
+    width: 44px; height: 44px; border-radius: 14px;
+    background: #ffffff; color: #0d0d0d;
+    display: grid; place-items: center;
+  }
+  .brand-name { font-size: 18px; font-weight: 800; letter-spacing: -0.3px; }
+  .eyebrow {
+    margin-top: 28px;
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 12px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+  }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--flame); box-shadow: 0 0 0 4px rgba(255,138,61,0.22); }
+  h1 { margin: 10px 0 0; font-size: 34px; line-height: 1.06; letter-spacing: -1px; font-weight: 800; }
+  .lede { margin: 12px 0 0; font-size: 16px; line-height: 1.45; color: rgba(255,255,255,0.68); }
+  .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 22px; }
+  .feature {
+    border-radius: 18px; padding: 12px 10px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .feature svg { display: block; color: #ffffff; }
+  .feature b { display: block; margin-top: 8px; font-size: 13px; font-weight: 800; }
+  .feature span { display: block; margin-top: 2px; font-size: 11px; color: rgba(255,255,255,0.55); line-height: 1.3; }
+
+  /* ---------- code card ---------- */
+  .card {
+    margin-top: 14px;
+    border-radius: 28px;
+    padding: 22px 20px 20px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+  }
+  .label { font-size: 12px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; color: var(--muted); }
+  .code-row { display: grid; grid-template-columns: repeat(8, 1fr); gap: 6px; margin-top: 12px; }
+  .cell {
+    aspect-ratio: 3 / 4;
+    border-radius: 12px;
+    background: var(--soft);
+    display: grid; place-items: center;
+    font-size: 22px; font-weight: 800; font-variant-numeric: tabular-nums;
+  }
+  .cell:nth-child(4) { margin-right: 6px; }
+  .copy {
+    margin-top: 12px;
+    display: inline-flex; align-items: center; gap: 6px;
+    height: 34px; padding: 0 14px; border-radius: 999px;
+    background: transparent; border: 1.5px solid var(--border);
+    color: var(--ink); font: inherit; font-size: 13px; font-weight: 800; cursor: pointer;
+  }
+  .btn {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    width: 100%; height: 56px; margin-top: 12px;
+    border-radius: 999px; border: 0;
+    font: inherit; font-size: 16px; font-weight: 800; text-decoration: none; cursor: pointer;
+    transition: transform 0.12s ease;
+  }
+  .btn:active { transform: scale(0.98); }
+  .btn.primary { margin-top: 18px; background: var(--ink); color: var(--on-ink); }
+  .btn.secondary { background: var(--soft); color: var(--ink); }
+
+  .steps { list-style: none; margin: 20px 0 0; padding: 0; display: grid; gap: 12px; }
+  .steps li { display: grid; grid-template-columns: 28px 1fr; gap: 12px; align-items: start; }
+  .num {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--soft); display: grid; place-items: center;
+    font-size: 13px; font-weight: 800;
+  }
+  .steps p { margin: 4px 0 0; font-size: 14px; line-height: 1.45; color: var(--muted); }
+  .steps strong { color: var(--ink); }
+
+  .bad { text-align: center; }
+  .bad p { margin: 0; font-size: 15px; line-height: 1.45; color: var(--muted); }
+
+  footer { margin-top: 26px; text-align: center; font-size: 12px; color: var(--faint); }
+  footer a { color: var(--faint); }
+</style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <div class="brand">
+      <div class="mark" aria-hidden="true">
+        <!-- barbell mark -->
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <rect x="1.5" y="9" width="2.5" height="6" rx="1" fill="currentColor"/>
+          <rect x="4.5" y="6.5" width="3" height="11" rx="1.2" fill="currentColor"/>
+          <rect x="7.5" y="11" width="9" height="2" rx="1" fill="currentColor"/>
+          <rect x="16.5" y="6.5" width="3" height="11" rx="1.2" fill="currentColor"/>
+          <rect x="20" y="9" width="2.5" height="6" rx="1" fill="currentColor"/>
+        </svg>
+      </div>
+      <div class="brand-name">Gym Tonight</div>
+    </div>
+
+    <div class="eyebrow"><span class="dot"></span>You're invited</div>
+    <h1>Train together.<br />Climb together.</h1>
+    <p class="lede">Your friend wants you on their leaderboard. Accept the invite and you're instantly friends.</p>
+
+    <div class="features">
+      <div class="feature">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z" fill="currentColor"/></svg>
+        <b>Earn XP</b><span>Every workout and step counts</span>
+      </div>
+      <div class="feature">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2c1 3.5 5 5.5 5 10.5A5 5 0 0 1 7 12.5C7 10 8.5 8.5 9 7c.6 1.7 1.6 2.6 2.6 3C11.6 7.5 12 4.5 12 2z" fill="currentColor"/></svg>
+        <b>Streaks</b><span>Keep going for up to 2x XP</span>
+      </div>
+      <div class="feature">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 4h10v3a5 5 0 0 1-10 0V4zM4 5h3v2a2 2 0 0 1-3-2zM17 5h3a2 2 0 0 1-3 2V5zM10.5 13h3v4h-3zM8 18h8v2H8z" fill="currentColor"/></svg>
+        <b>Compete</b><span>Weekly and all-time boards</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="card" id="codeCard" hidden>
+    <div class="label">Invite code</div>
+    <div class="code-row" id="cells" aria-label="Invite code"></div>
+    <button class="copy" id="copyBtn" type="button">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3" stroke="currentColor" stroke-width="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" stroke="currentColor" stroke-width="2"/></svg>
+      <span id="copyText">Copy code</span>
+    </button>
+
+    <a class="btn primary" id="openBtn" href="#">Open in Gym Tonight</a>
+    <a class="btn secondary" id="storeBtn" href="#">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M5 20h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span id="storeText">Get the app</span>
+    </a>
+
+    <ol class="steps">
+      <li><span class="num">1</span><p><strong>Already have the app?</strong> Tap “Open in Gym Tonight” and you're friends.</p></li>
+      <li><span class="num">2</span><p><strong>New here?</strong> Get the app and sign up. On the Invite friends screen (Social tab), tap <strong>Paste</strong> next to “Have an invite code?”.</p></li>
+    </ol>
+  </section>
+
+  <section class="card bad" id="badCard" hidden>
+    <p>This invite link looks incomplete. Ask your friend to send it again, or search for their username in the app.</p>
+    <a class="btn primary" id="storeBtn2" href="#">Get Gym Tonight</a>
+  </section>
+
+  <footer>
+    <a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms-of-service.html">Terms of Service</a>
+  </footer>
+</main>
+<script>
+  // ---- set these once the app is live ----
+  var APP_STORE_URL = 'https://apps.apple.com/app/id6810204076';
+  var PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.pumpbros.app'; // TODO: your Android package
+  // -----------------------------------------
+
+  var CHARS = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  var raw = (new URLSearchParams(location.search).get('c') || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
+  var valid = raw.length === 8 && raw.split('').every(function (ch) { return CHARS.indexOf(ch) !== -1; });
+  var isAndroid = /android/i.test(navigator.userAgent);
+  var storeUrl = isAndroid ? PLAY_STORE_URL : APP_STORE_URL;
+
+  function copy(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) return navigator.clipboard.writeText(text).catch(function () {});
+    var t = document.createElement('textarea'); t.value = text; document.body.appendChild(t); t.select();
+    try { document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(t);
+    return Promise.resolve();
+  }
+
+  if (valid) {
+    document.getElementById('codeCard').hidden = false;
+    var cells = document.getElementById('cells');
+    raw.split('').forEach(function (ch) {
+      var d = document.createElement('div'); d.className = 'cell'; d.textContent = ch; cells.appendChild(d);
+    });
+    document.getElementById('openBtn').href = 'pumpbros://invite/' + raw;
+    var store = document.getElementById('storeBtn');
+    store.href = storeUrl;
+    document.getElementById('storeText').textContent = isAndroid ? 'Get it on Google Play' : 'Download on the App Store';
+    // Copy the code on the way to the store so it can be pasted after signing up.
+    store.addEventListener('click', function () { copy(raw); });
+    var copyText = document.getElementById('copyText');
+    document.getElementById('copyBtn').addEventListener('click', function () {
+      copy(raw).then(function () {
+        copyText.textContent = 'Copied';
+        setTimeout(function () { copyText.textContent = 'Copy code'; }, 1800);
+      });
+    });
+  } else {
+    document.getElementById('badCard').hidden = false;
+    document.getElementById('storeBtn2').href = storeUrl;
+  }
+</script>
+</body>
+</html>
