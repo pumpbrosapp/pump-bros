@@ -27,6 +27,17 @@
     --faint: #c4c2c6;
     --flame: #ff8a3d;
     --shadow: 0 18px 40px rgba(13, 13, 13, 0.08);
+    /* hero card: white in light mode, black in dark mode */
+    --hero-bg: #ffffff;
+    --hero-ink: #0d0d0d;
+    --hero-sub: rgba(13,13,13,0.62);
+    --hero-faint: rgba(13,13,13,0.5);
+    --hero-tile: #f4f2f0;
+    --hero-tile-border: #efeae5;
+    --hero-grid: rgba(13,13,13,0.05);
+    --hero-glow: rgba(255, 138, 61, 0.22);
+    --mark-bg: #0d0d0d;
+    --mark-ink: #ffffff;
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -39,6 +50,16 @@
       --muted: #9b9b9f;
       --faint: #5a5a60;
       --shadow: none;
+      --hero-bg: #0d0d0d;
+      --hero-ink: #ffffff;
+      --hero-sub: rgba(255,255,255,0.68);
+      --hero-faint: rgba(255,255,255,0.55);
+      --hero-tile: rgba(255,255,255,0.08);
+      --hero-tile-border: rgba(255,255,255,0.08);
+      --hero-grid: rgba(255,255,255,0.05);
+      --hero-glow: rgba(255, 138, 61, 0.28);
+      --mark-bg: #ffffff;
+      --mark-ink: #0d0d0d;
     }
   }
   * { box-sizing: border-box; }
@@ -57,17 +78,19 @@
     overflow: hidden;
     border-radius: 32px;
     padding: 30px 24px 26px;
-    background: #0d0d0d;
-    color: #ffffff;
+    background: var(--hero-bg);
+    color: var(--hero-ink);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
   }
   .hero::before {
-    /* soft light from the top-right + a faint grid, so the black isn't flat */
+    /* soft light from the top-right + a faint grid, so the card isn't flat */
     content: "";
     position: absolute; inset: 0;
     background:
-      radial-gradient(120% 80% at 100% 0%, rgba(255, 138, 61, 0.28), transparent 55%),
-      linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px) 0 0 / 28px 28px,
-      linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px) 0 0 / 28px 28px;
+      radial-gradient(120% 80% at 100% 0%, var(--hero-glow), transparent 55%),
+      linear-gradient(var(--hero-grid) 1px, transparent 1px) 0 0 / 28px 28px,
+      linear-gradient(90deg, var(--hero-grid) 1px, transparent 1px) 0 0 / 28px 28px;
     -webkit-mask-image: linear-gradient(180deg, #000 30%, transparent 100%);
             mask-image: linear-gradient(180deg, #000 30%, transparent 100%);
   }
@@ -75,7 +98,7 @@
   .brand { display: flex; align-items: center; gap: 10px; }
   .mark {
     width: 44px; height: 44px; border-radius: 14px;
-    background: #ffffff; color: #0d0d0d;
+    background: var(--mark-bg); color: var(--mark-ink);
     display: grid; place-items: center;
   }
   .brand-name { font-size: 18px; font-weight: 800; letter-spacing: -0.3px; }
@@ -83,20 +106,20 @@
     margin-top: 28px;
     display: inline-flex; align-items: center; gap: 8px;
     font-size: 12px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase;
-    color: rgba(255,255,255,0.7);
+    color: var(--hero-faint);
   }
   .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--flame); box-shadow: 0 0 0 4px rgba(255,138,61,0.22); }
   h1 { margin: 10px 0 0; font-size: 34px; line-height: 1.06; letter-spacing: -1px; font-weight: 800; }
-  .lede { margin: 12px 0 0; font-size: 16px; line-height: 1.45; color: rgba(255,255,255,0.68); }
+  .lede { margin: 12px 0 0; font-size: 16px; line-height: 1.45; color: var(--hero-sub); }
   .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 22px; }
   .feature {
     border-radius: 18px; padding: 12px 10px;
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.08);
+    background: var(--hero-tile);
+    border: 1px solid var(--hero-tile-border);
   }
-  .feature svg { display: block; color: #ffffff; }
+  .feature svg { display: block; color: var(--hero-ink); }
   .feature b { display: block; margin-top: 8px; font-size: 13px; font-weight: 800; }
-  .feature span { display: block; margin-top: 2px; font-size: 11px; color: rgba(255,255,255,0.55); line-height: 1.3; }
+  .feature span { display: block; margin-top: 2px; font-size: 11px; color: var(--hero-faint); line-height: 1.3; }
 
   /* ---------- code card ---------- */
   .card {
